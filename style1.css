@@ -1,0 +1,129 @@
+body {
+     font-family: 'Arial', sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f9f9f9; /* Light background for the overall page */
+ }
+ 
+ header {
+     background: #007bff; /* Blue header */
+     color: #fff;
+     padding: 20px 0;
+     text-align: center;
+ }
+ 
+ main {
+     padding: 20px;
+ }
+ 
+ #certifications {
+     max-width: 1200px; /* Increased max width for the section */
+     margin: 0 auto;
+ }
+ 
+ .certification-container {
+     display: flex; /* Use flexbox to align items in a row */
+     justify-content: space-between; /* Space between items */
+     flex-wrap: wrap; /* Allow wrapping to the next line on smaller screens */
+ }
+ 
+ .certification {
+     flex: 1; /* Allow each certification to grow equally */
+     margin: 20px; /* Increased margin around each certification */
+     min-width: 300px; /* Set a minimum width for responsiveness */
+     max-width: 350px; /* Set a maximum width for the cards */
+ }
+ 
+ .certification-card {
+     background: #333; /* Dark background for the card */
+     color: #fff; /* White text for contrast */
+     border-radius: 10px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+     overflow: hidden;
+     transition: transform 0.3s, box-shadow 0.3s;
+     padding: 20px; /* Increased padding for more space inside the card */
+     height: 400px; /* Fixed height for uniformity */
+ }
+ 
+ .certification-card:hover {
+     transform: scale(1.05);
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7); /* Darker shadow on hover */
+ }
+ 
+ .certificate-image {
+     width: 100%;
+     height: auto;
+     margin-bottom: 15px; /* Space between image and text */
+ }
+ 
+ .certification-details {
+     padding: 15px;
+ }
+ 
+ .certification-details h3 {
+     margin: 0 0 10px;
+     color: #fff; /* White text for the title */
+ }
+ 
+ .certification-details p {
+     margin: 0 0 15px;
+     color: #ccc; /* Light gray text for description */
+ }
+ 
+ .verify-button {
+     background-color: #007bff; /* Blue button */
+     color: white;
+     border: none;
+     padding: 10px 15px;
+     border-radius: 5px;
+     cursor: pointer;
+     width: 100%; /* Full width button */
+ }
+ 
+ .verify-button:hover {
+     background-color: #0056b3; /* Darker blue on hover */
+ }
+ 
+ .badge-image {
+     width: 50px;
+     height: auto;
+     margin-top: 10px;
+ }
+ 
+ /* Modal Styles */
+ .modal {
+     display: none; /* Hidden by default */
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Sit on top */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgb(0,0,0); /* Fallback color */
+     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+ }
+ 
+ .modal-content {
+     margin: auto;
+     display: block;
+     width: 80%;
+     max-width: 700px;
+ }
+ 
+ .close {
+     position: absolute;
+     top: 15px;
+     right: 35px;
+     color: #fff;
+     font-size: 40px;
+     font-weight: bold;
+     transition: 0.3s;
+ }
+ 
+ .close:hover,
+ .close:focus {
+     color: #bbb;
+     text-decoration: none;
+     cursor: pointer;
+ }

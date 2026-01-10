@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style1.css"> <!-- Updated CSS file name -->
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    
+    <main>
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="certification-container">
+                <div class="certification">
+                    <div class="certification-card">
+                        <img src="path/to/certificate-image1.jpg" alt="Cisco Certificate" class="certificate-image">
+                        <div class="certification-details">
+                            <h3>Cybersecurity Essentials</h3>
+                            <p>Issued by: <strong>Cisco</strong></p>
+                            <a href="https://drive.google.com/your-certificate-link" target="_blank" class="verify-button">Verify Certificate</a>
+                        </div>
+                        <img src="path/to/cisco-logo.png" alt="Cisco Badge" class="badge-image">
+                    </div>
+                </div>
+                <div class="certification">
+                    <div class="certification-card">
+                        <img src="path/to/certificate-image2.jpg" alt="Kaggle Certificate" class="certificate-image">
+                        <div class="certification-details">
+                            <h3>Python Course</h3>
+                            <p>Issued by: <strong>Kaggle</strong></p>
+                            <a href="https://drive.google.com/your-certificate-link" target="_blank" class="verify-button">Verify Certificate</a>
+                        </div>
+                        <img src="path/to/kaggle-logo.png" alt="Kaggle Badge" class="badge-image">
+                    </div>
+                </div>
+                <div class="certification">
+                    <div class="certification-card">
+                        <img src="path/to/certificate-image3.jpg" alt="Simplilearn Certificate" class="certificate-image">
+                        <div class="certification-details">
+                            <h3>Ethical Hacking</h3>
+                            <p>Issued by: <strong>Simplilearn</strong></p>
+                            <a href="https://drive.google.com/your-certificate-link" target="_blank" class="verify-button">Verify Certificate</a>
+                        </div>
+                        <img src="path/to/simplilearn-logo.png" alt="Simplilearn Badge" class="badge-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- JavaScript for Modal -->
+        <script>
+            function openModal(certificateUrl) {
+                window.open(certificateUrl, '_blank');
+            }
+        </script>
+        
+        <!-- CSS Styling -->
+       <style>
+        /* Certification Section */
+#certifications {
+    text-align: center;
+    padding: 60px 0;
+    background: var(--bg-color); /* Portfolio theme background */
+}
+
+h2 {
+    color: var(--primary-color); /* Portfolio heading color */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Flexbox for a clean layout */
+.certification-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Certification Cards */
+.certification-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect - 3D Pop */
+.certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Certificate Image */
+.certificate-image {
+    width: 100%; /* Consistent width */
+    height: 200px; /* Uniform height */
+    object-fit: cover; /* Prevents distortion */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Image Hover Effect */
+.certification-card:hover .certificate-image {
+    transform: scale(1.05);
+}
+
+/* Badge Image */
+.badge-image {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2)); /* Nice shadow effect */
+}
+
+/* Certification Details */
+.certification-details {
+    margin-top: 15px;
+}
+
+/* Button */
+.verify-button {
+    display: inline-block;
+    background: var(--button-color); /* Portfolio button color */
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+/* Button Hover */
+.verify-button:hover {
+    background: var(--button-hover);
+    transform: scale(1.1);
+}
+
+       </style>
+        
+    </main>
+
+    <!-- Modal for displaying the certificate -->
+    <div id="certificateModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Certificate">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
